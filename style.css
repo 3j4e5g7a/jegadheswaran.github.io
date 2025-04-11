@@ -700,13 +700,19 @@ height: 80px;
 }
 
 @media (max-width: 412px){
+  *{
+    overflow: scroll;
+  }
+  .navbar{
+    padding: 20px;
+  }
   .timeline{
     display: none;
   }
 
   .profile-page{
     width: 100%;
-    height: auto;
+    height: 80vh;
     align-items: end;
   }
 
@@ -749,7 +755,7 @@ height: 80px;
     text-align: center;
   }
   .aboutme-2{
-      height: 35vh;
+      height: 40vh;
       width: 100%;
       display: list-item;
   }
@@ -828,6 +834,7 @@ height: 80px;
 }
 
 .portfolio-img-container{
+   height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -835,4 +842,24 @@ height: 80px;
 .portfolio-img-container img {
   object-fit: cover;
 }
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  height: 20vh;
+}
+.footer-nav{
+  align-items: center;
+  padding-bottom: 20px;
+}
+.footer-nav li a{
+  font-size: 20px;
+}
+
+.footer-right{
+  display: flex;
+  flex-direction: column;
+}
+
 }
