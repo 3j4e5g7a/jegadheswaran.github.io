@@ -1,23 +1,22 @@
-document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault(); // Prevent default jump
-        const targetId = this.getAttribute("href"); // Get target section ID
-        const targetSection = document.querySelector(targetId);
+ const OFFSET = document.querySelector('.navbar')?.offsetHeight || 0;
 
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+
+      if (href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+
+        if (target) {
+          const elementPosition = target.offsetTop;
+          const offsetPosition = elementPosition - OFFSET;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
         }
+      }
     });
-});
-
-document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault(); // Prevent default jump
-        const targetId = this.getAttribute("href"); // Get target section ID
-        const targetSection = document.querySelector(targetId);
-
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-    });
-});
+  });
