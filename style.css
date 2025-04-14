@@ -71,7 +71,7 @@ background-color: #f8f8f8;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 20px 40px;
+padding: 0.75rem 1.5rem;
 background-color: #f8f8f8;
 }
 
@@ -101,6 +101,14 @@ background-color: #f8f8f8;
   color:#222222;
   font-size: 16px;
   border: none;
+}
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #222222;
+  cursor: pointer;
 }
 
 .profile-page{
@@ -719,7 +727,7 @@ height: 80px;
   transform: scale(1.2);
 }
 
-@media (max-width: 412px){
+@media (max-width: 425px){
   *{
     overflow: scroll;
   }
@@ -888,4 +896,29 @@ height: 80px;
   flex-direction: column;
 }
 
+}
+
+@media (max-width: 768px) {
+  .navbar{
+    position: relative;
+  }
+  .nav-content {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #111;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav-content.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
 }
