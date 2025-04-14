@@ -73,10 +73,11 @@ justify-content: space-between;
 align-items: center;
 padding: 0.75rem 1.5rem;
 background-color: #f8f8f8;
+flex-wrap: wrap;
 }
 
 .logo img{
-  height: 30px;
+  height: 2rem;
   width: auto;
 }
 
@@ -383,7 +384,7 @@ background-color: #f8f8f8;
   display: flex;
   font-family: Nohemi;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 0.75rem;
   color: #7b7b7b;
 }
 
@@ -697,7 +698,7 @@ height: 80px;
   color: #fff;
 }
 
-.footer-right .email {
+.footer-left .email {
   color: #fff;
   text-decoration: none;
   font-size: 20px;
@@ -727,198 +728,163 @@ height: 80px;
   transform: scale(1.2);
 }
 
-@media (max-width: 425px){
-  *{
-    overflow: scroll;
-  }
-  .logo{
-    padding-right: 20px;
-  }
-  .navbar{
-    padding: 20px;
-  }
-  .timeline{
-    display: none;
-  }
-
-  .profile-page{
-    width: 100%;
-    height: 80vh;
-    align-items: end;
-  }
-
-  .hello{
-      height: 70vh;
-      justify-content: flex-start;
-  }
-
-  .animated-text{
-    font-size: 150px;
-  }
-
-  .name{
-    font-size: 30px;
-  }
-
-  .scroll-down{
-    position: static;
-  }
-
-  .profile{
-    width: 100%;
-    height: auto;
-    position: absolute;
-  }
-
-  .profile img{
-    position: relative;
-    height: auto;
-        width: 90%;
-        position: relative;
-  }
-
-  .about-container{
-    display: contents;
-    width: 100%;
-    height: auto;
-  }
-  .aboutme-1{
-    width: 100%;
-  }
-  .aboutme-1 h1{
-    text-align: center;
-  }
-  .aboutme-2{
-      height: 40vh;
-      width: 100%;
-      display: list-item;
-  }
-  .aboutme-2 img{
-    width: 100%;
-    height: auto;
-  }
-  .top{
-    display: none;
-  }
-
-  .aboutme-3{
-    width: 100%;
-  }
-
-  .portfolio-container{
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    display: flex;
-  }
-  .portfolio-card{
-    width: 100%;
-    height: auto;
-  }
-  .portfolio-card img{
-    object-fit: cover;
-    height: 40vh;
-  }
-  .portfolio-card:hover .overlay {
-    transform: scale(1.05);
-    opacity: 1;
-  }
-  .overlay{
-    height: 40vh;
-  }
-
-  .step-card{
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-  .experiences svg {
-    display: flex;
-    width: 90px;
-}
-
-.ex2022{
-  padding: 20px;
-  flex-direction: column;
-  display: flex;
-  width: 100%;
-  height: auto;
-}
-.step-number-01 svg {
-  width: 80px;
-  height: 80px;
-}
-.step-info-01, .step-info-02 {
-  text-align: left;
-  padding: 0;
-}
-.step-icon-01, .step-icon-02 {
-  display: none;
-}
-.ex2024{
-  padding: 20px;
-  flex-direction: column-reverse;
-  display: flex;
-  width: 100%;
-  height: auto;
-}
-
-.portfolio-section{
-  padding: 20px;
-}
-
-.portfolio-img-container{
-   height: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.portfolio-img-container img {
-  object-fit: cover;
-}
-.footer{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 20px;
-  height: 20vh;
-}
-.footer-nav{
-  align-items: center;
-  padding-bottom: 20px;
-}
-.footer-nav li a{
-  font-size: 20px;
-}
-
-.footer-right{
-  display: flex;
-  flex-direction: column;
-}
-
-}
-
 @media (max-width: 768px) {
   .navbar{
-    position: relative;
+    position: absolute;
   }
   .nav-content {
     display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
     flex-direction: column;
-    background-color: #111;
-    text-align: center;
-    padding: 1rem 0;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
   }
 
-  .nav-content.show {
+  .nav-content.active {
     display: flex;
   }
 
   .nav-toggle {
     display: block;
   }
+
+  .profile-page{
+    max-width: 100%;
+  }
+  .timeline{
+    max-width: 10%;
+  }
+  .hello{
+    max-width: 45%;
+    padding: 0%;
+  }
+  .animated-text{
+    font-size: 10rem;
+  }
+  .name{
+    font-size: 2rem;
+  }
+  .profile{
+    max-width: 45%;
+    overflow: hidden;
+    justify-content: center;
+  }
+  .profile img{
+    height: 80%;
+  }
+  .aboutme-1{
+    max-width: 40%;
+  }
+
+  .aboutme-2{
+    max-width: 20%;
+  }
+  .aboutme-3{
+    justify-content: flex-start;
+    gap: 10%;
+    max-width: 40%;
+    padding: 0rem 20px 0rem 20px;
+  }
+  .point-1{
+    max-height: 40%;
+  }
+  .point-2{
+    max-height: 40%;
+  }
+  .point-1 p{
+    font-size: 0.65rem;
+  }
+  .point-2 p{
+    font-size: 0.65rem;
+  }
+
+  .top{
+    max-width: 100%;
+    max-height: 20%;
+    margin: 0;
+    overflow: hidden;
+  }
+  .top svg{
+    max-width: 50%;
+  }
+  .portfolio-container{
+    height: auto;
+  }
+
+  .portfolio-card{
+    height: 50vh;
+  }
+.portfolio-card img{
+  width: 100%;
+  height: 100%;
+}
+.step-card{
+  padding: 20px;
+}
+
+.ex2022 {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.step-number-01{
+  justify-content: left;
+  max-width: 100%;
+}
+.step-info-01{
+  padding: 0;
+}
+.step-info-01 h2 {
+  font-size: 2rem;
+}
+
+.step-info-01 p {
+  font-size: 1rem;
+  max-width: 100%;
+}
+.step-icon-01, .step-icon-02{
+  display: none;
+}
+.ex2024 {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.step-info-02{
+  max-width: 100%;
+  padding: 0;
+}
+.step-info-02 h2 {
+  font-size: 2rem;
+}
+
+.step-info-02 p {
+  font-size: 1rem;
+  max-width: 100%;
+}
+.step-number-02{
+  max-width: 100%;
+  justify-content: right;
+}
+
+.portfolio-section{
+  padding: 20px;
+}
+.portfolio-img-container{
+  height: 50%;
+  width: 100%;
+  padding: 0;
+}
+
+.portfolio-img-container img{
+  width: 100%;
+  height: auto;
+}
+
 }

@@ -20,6 +20,7 @@
       }
     });
   });
+  
   const navToggle = document.getElementById('nav-toggle');
   const navContent = document.getElementById('nav-content');
 
