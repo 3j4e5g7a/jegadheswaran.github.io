@@ -727,8 +727,22 @@ height: 80px;
 .socials img:hover {
   transform: scale(1.2);
 }
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
 
 @media (max-width: 768px) {
+  .nav-toggle {
+    color: #222222;
+    display: block; /* Show toggle button on small screens */
+  }
+
   .navbar{
     position: absolute;
   }
