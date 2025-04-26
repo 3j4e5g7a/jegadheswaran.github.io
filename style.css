@@ -900,5 +900,77 @@ height: 80px;
   width: 100%;
   height: auto;
 }
+}
+@media (max-width: 425px){
+  .body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .navbar{
+    position: relative;
+    width: 100%;
+  }
+  .profile-page{
+    max-width: 100vw;
+    flex-direction: column;
+  }
 
+  .timeline{
+    display: none;
+  }
+  .hello{
+    max-width: 100%;
+    height: 50vh;
+  }
+  .animated-text{
+    font-size: 7rem;
+  }
+  .name{
+    font-size: 2rem;
+    padding-bottom: 40px;
+  }
+  .scroll-down{
+    display: contents;
+  }
+  .profile{
+    max-width: 100%;
+    height: 50vh;
+  }
+  .profile img{
+    width: auto;
+    height: 50vh;
+  }
+  .about-container{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    gap: 20%;
+    max-height: auto;
+  }
+  .aboutme-1{
+    display: contents;
+    width: 100%;
+    height: 50%;
+    align-items: flex-start;
+    justify-content: left;
+  }
+  .aboutme-1 h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .aboutme-1 p{
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  .aboutme-2{
+    display: none;
+  }
+  .aboutme-3{
+    margin-bottom: 10%;
+    max-width: 100%;
+    display: contents;
+  }
 }
